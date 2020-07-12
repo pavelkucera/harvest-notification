@@ -1,14 +1,12 @@
 name:                harvest-notification
 version:             0.1.0.0
-github:              "githubuser/harvest-notification"
-license:             BSD3
-author:              "Author name here"
-maintainer:          "example@example.com"
-copyright:           "2020 Author name here"
+github:              "pavelkucera/harvest-notification"
+license:             MIT
+author:              "Pavel Kucera"
+copyright:           "2020 Pavel Kucera"
 
 extra-source-files:
 - README.md
-- ChangeLog.md
 
 # Metadata used when publishing your package
 # synopsis:            Short description of your package
@@ -17,32 +15,22 @@ extra-source-files:
 # To avoid duplicated efforts in documentation and dealing with the
 # complications of embedding Haddock markup inside cabal files, it is
 # common to point users to the README.md file.
-description:         Please see the README on GitHub at <https://github.com/githubuser/harvest-notification#readme>
+description:         Please see the README on GitHub at <https://github.com/pavelkucera/harvest-notification#readme>
 
 dependencies:
+- aeson
 - base >= 4.7 && < 5
+- process
+- req
+- text
+- time
 
 library:
   source-dirs: src
 
 executables:
-  harvest-notification-exe:
+  harvest-notification:
     main:                Main.hs
     source-dirs:         app
-    ghc-options:
-    - -threaded
-    - -rtsopts
-    - -with-rtsopts=-N
-    dependencies:
-    - harvest-notification
-
-tests:
-  harvest-notification-test:
-    main:                Spec.hs
-    source-dirs:         test
-    ghc-options:
-    - -threaded
-    - -rtsopts
-    - -with-rtsopts=-N
     dependencies:
     - harvest-notification

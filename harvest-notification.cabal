@@ -4,59 +4,56 @@ cabal-version: 1.12
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: b879ddef07be34448e2161fbefab9bb92072420490b1428d829a035dc653ae81
+-- hash: 90a70e4b9ce6299f621610e90664d3be277d77fc6782bd8dca1401fa11af8f12
 
 name:           harvest-notification
 version:        0.1.0.0
-description:    Please see the README on GitHub at <https://github.com/githubuser/harvest-notification#readme>
-homepage:       https://github.com/githubuser/harvest-notification#readme
-bug-reports:    https://github.com/githubuser/harvest-notification/issues
-author:         Author name here
-maintainer:     example@example.com
-copyright:      2020 Author name here
+description:    Please see the README on GitHub at <https://github.com/pavelkucera/harvest-notification#readme>
+homepage:       https://github.com/pavelkucera/harvest-notification#readme
+bug-reports:    https://github.com/pavelkucera/harvest-notification/issues
+author:         Pavel Kucera
+maintainer:     Pavel Kucera
+copyright:      2020 Pavel Kucera
 license:        BSD3
 license-file:   LICENSE
 build-type:     Simple
 extra-source-files:
     README.md
-    ChangeLog.md
 
 source-repository head
   type: git
-  location: https://github.com/githubuser/harvest-notification
+  location: https://github.com/pavelkucera/harvest-notification
 
 library
   exposed-modules:
-      Lib
+      Harvest
+      Macos.Notification
+      Overtime
   other-modules:
       Paths_harvest_notification
   hs-source-dirs:
       src
   build-depends:
-      base >=4.7 && <5
+      aeson
+    , base >=4.7 && <5
+    , process
+    , req
+    , text
+    , time
   default-language: Haskell2010
 
-executable harvest-notification-exe
+executable harvest-notification
   main-is: Main.hs
   other-modules:
       Paths_harvest_notification
   hs-source-dirs:
       app
-  ghc-options: -threaded -rtsopts -with-rtsopts=-N
   build-depends:
-      base >=4.7 && <5
+      aeson
+    , base >=4.7 && <5
     , harvest-notification
-  default-language: Haskell2010
-
-test-suite harvest-notification-test
-  type: exitcode-stdio-1.0
-  main-is: Spec.hs
-  other-modules:
-      Paths_harvest_notification
-  hs-source-dirs:
-      test
-  ghc-options: -threaded -rtsopts -with-rtsopts=-N
-  build-depends:
-      base >=4.7 && <5
-    , harvest-notification
+    , process
+    , req
+    , text
+    , time
   default-language: Haskell2010
