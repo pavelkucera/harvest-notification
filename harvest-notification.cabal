@@ -4,7 +4,7 @@ cabal-version: 1.12
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: 90a70e4b9ce6299f621610e90664d3be277d77fc6782bd8dca1401fa11af8f12
+-- hash: 5fd129506787581ab4d2e65824dc69ba7e281af1d4d13b5086cd47b3b149003c
 
 name:           harvest-notification
 version:        0.1.0.0
@@ -14,7 +14,7 @@ bug-reports:    https://github.com/pavelkucera/harvest-notification/issues
 author:         Pavel Kucera
 maintainer:     Pavel Kucera
 copyright:      2020 Pavel Kucera
-license:        BSD3
+license:        MIT
 license-file:   LICENSE
 build-type:     Simple
 extra-source-files:
