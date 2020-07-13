@@ -22,6 +22,7 @@ overtime time =
   Notification {
     text = "Overtime of " <> formatTime time <> "h"
   , title = Just "You're working overtime."
+  , subtitle = Nothing
   }
 
 almostOvertime :: Double -> Notification
